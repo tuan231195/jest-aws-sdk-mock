@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+    - 10
+cache:
+    directories:
+        - ~/.npm
+jobs:
+    include:
+        -   stage: test
+            script:
+                - npm run validate
+                - npm run build
+        -   stage: deploy
+            if: branch = master
+            script:
+                - npm config set access public
+                - npm run semantic-release
