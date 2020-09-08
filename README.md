@@ -8,7 +8,7 @@ Create Jest Mocks for AWS SDK services.
 This module was created to help test AWS Lambda functions but can be used in any situation where the AWS SDK needs to be mocked. This is a rewrite of https://github.com/dwyl/aws-sdk-mock but using jest under the hood instead of sinon.js.
 
 * [What](#what)
-* [Getting Started](#how)
+* [Getting Started](#how-usage)
 * [Documentation](#documentation)
 
 ## What?
@@ -121,6 +121,19 @@ sns.publish({} as any, function(err, data) {
     expect(data).toBe('test');
     done();
 });
+```
+
+* Individual SDK import will work
+
+```typescript
+AWSMock.mock('S3', 'getObject', function(params, callback) {
+    callback(null, 'message');
+});
+const S3 = require('aws-sdk/clients/s3');
+const s3 = new S3();
+const result = await s3.getObject({} as any).promise();
+expect(result).toEqual('message');
+done();
 ```
 
 ### Nested services
