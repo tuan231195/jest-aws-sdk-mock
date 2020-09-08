@@ -82,7 +82,7 @@ describe('aws-sdk-mock', () => {
 	it('should fail on invalid input if paramValidation is set', done => {
 		AWSMock.mock('S3', 'getObject', { Body: 'body' });
 		const s3 = new AWS.S3({ paramValidation: true });
-		s3.getObject({ Bucket: 'b', notKey: 'k' } as any, function(err, data) {
+		s3.getObject({ Bucket: 'b', notKey: 'k' } as any, function(err) {
 			expect(err).toBeDefined();
 			done();
 		});
@@ -195,6 +195,7 @@ describe('aws-sdk-mock', () => {
 					// @ts-ignore
 					this.value = value;
 				},
+				// eslint-disable-next-line @typescript-eslint/no-empty-function
 				function() {}
 			);
 		}
@@ -210,6 +211,7 @@ describe('aws-sdk-mock', () => {
 	it('should support createReadStream', done => {
 		AWSMock.mock('S3', 'getObject', 'body');
 		const s3 = new AWS.S3();
+		// eslint-disable-next-line @typescript-eslint/no-empty-function
 		const req = s3.getObject({} as any, function() {});
 		const stream = req.createReadStream();
 		expect(isStream(stream));
@@ -261,6 +263,7 @@ describe('aws-sdk-mock', () => {
 	});
 
 	it('createReadStream should ignore non buffer objects', done => {
+		// eslint-disable-next-line @typescript-eslint/no-empty-function
 		AWSMock.mock('S3', 'getObject', () => {});
 		const s3 = new AWS.S3();
 		const req = s3.getObject({} as any);

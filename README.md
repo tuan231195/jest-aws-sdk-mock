@@ -2,8 +2,8 @@
 
 Create Jest Mocks for AWS SDK services.
 
-[![Build Status](https://img.shields.io/travis/dwyl/aws-sdk-mock/master.svg?style=flat-square)](https://travis-ci.org/dwyl/aws-sdk-mock)
-[![codecov.io](https://img.shields.io/codecov/c/github/dwyl/aws-sdk-mock/master.svg?style=flat-square)](http://codecov.io/github/dwyl/aws-sdk-mock?branch=master)
+[![Build Status](https://travis-ci.org/tuan231195/jest-aws-sdk-mock.svg?branch=master)](https://travis-ci.org/tuan231195/jest-aws-sdk-mock)
+[![codecov](https://codecov.io/gh/tuan231195/jest-aws-sdk-mock/branch/master/graph/badge.svg)](https://codecov.io/gh/tuan231195/jest-aws-sdk-mock)
 
 This module was created to help test AWS Lambda functions but can be used in any situation where the AWS SDK needs to be mocked. This is a rewrite of https://github.com/dwyl/aws-sdk-mock but using jest under the hood instead of sinon.js.
 

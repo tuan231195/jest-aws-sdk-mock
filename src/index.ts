@@ -267,7 +267,6 @@ function restoreService(service) {
 			// module does not exist
 		}
 	}
-
 }
 
 /**
