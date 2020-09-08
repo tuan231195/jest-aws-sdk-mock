@@ -21,8 +21,7 @@
 		"prettier:check": "prettier --check 'src/**/*.{ts,js}'",
 		"publish:coverage": "codecov",
 		"validate": "run-s test:coverage lint prettier:check",
-		"ci:validate": "rm -rf node_modules && npm ci && npm run validate",
-		"prepublishOnly": "npm run validate && npm run build"
+		"ci:validate": "rm -rf node_modules && npm ci && npm run validate"
 	},
 	"license": "MIT",
 	"devDependencies": {
