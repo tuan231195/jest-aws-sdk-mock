@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/tuan231195/jest-aws-sdk-mock/compare/v1.0.1...v1.0.2) (2020-09-08)
+
+
+### Bug Fixes
+
+* **package:** make aws-sdk peer dependencies ([40c347c](https://github.com/tuan231195/jest-aws-sdk-mock/commit/40c347c20c5b0a9b803cea7022165bc290bcc8a4))
+
 ## [1.0.1](https://github.com/tuan231195/jest-aws-sdk-mock/compare/v1.0.0...v1.0.1) (2020-09-08)
 
 
