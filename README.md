@@ -54,7 +54,7 @@ AWSMock.restore('S3');
 #### Using TypeScript
 
 ```typescript
-import AWSMock from 'jest-aws-sdk-mock';
+import * as AWSMock from 'jest-aws-sdk-mock';
 import AWS from 'aws-sdk';
 import { GetItemInput } from 'aws-sdk/clients/dynamodb';
 
